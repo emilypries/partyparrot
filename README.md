@@ -1,25 +1,32 @@
 # :partyparrot:
 
-![partyparrot](partyparrot.png)
+![partyparrot](example.gif)
 
 # Usage
 
-## 1
+## With the Party Parrot (:partyparrot:)
+
+Just pass the script a string of your choosing.
+
 ```bash
 python partyparrot.py "HELLO" | pbcopy
 ```
 
-OR
+## Custom Emoji List
+
+Use the `-e` or `--emojis` flag to use a custom list of emojis.
 
 ```bash
-python partyparrot.py "MY STRING" ":emoji1:" ":emoji2:" ":emoji3:", ":emoji4:" | pbcopy
+python partyparrot.py "something stupid" -e ":emoji1:" ":emoji2:" ":emoji3:" ":emoji4:" | pbcopy
 ```
 
-## 2
-Paste into Slack
+## Auto-Post to Slack
 
-## 3
-Enjoy.
+Use the `-f` or `--force` flag to auto-post to your favorite Slack channel (configure URL in the "Incoming Webhooks" section of the "Integrations" page).
+
+```bash
+SHITPOSTING_ENDPOINT="<YOUR_SLACK_INCOMING_WEBHOOK_URL>" python partyparrot.py "something stupid" -f
+```
 
 ## Tests
 
